@@ -52,7 +52,7 @@ if [ -z $LINK_ARTIFACT ] || [ $LINK_ARTIFACT = false ] ; then
     "embeds": [ {
       "color": '$EMBED_COLOR',
       "author": {
-        "name": "'"$3"' '"$STATUS_MESSAGE"' - '"$CI_PROJECT_PATH_SLUG"'",
+        "name": "'"$4"' '"$STATUS_MESSAGE"' - '"$CI_PROJECT_PATH_SLUG"'",
         "url": "'"$CI_PIPELINE_URL"'",
         "icon_url": "https://gitlab.com/favicon.png"
       },
@@ -71,8 +71,13 @@ if [ -z $LINK_ARTIFACT ] || [ $LINK_ARTIFACT = false ] ; then
           "inline": true
         },
         {
-          "name": "Target Env",
+          "name": "Tag Name",
           "value": "'"$2"'",
+          "inline": true
+        },
+        {
+          "name": "Target Env",
+          "value": "'"$3"'",
           "inline": true
         }
         ],
